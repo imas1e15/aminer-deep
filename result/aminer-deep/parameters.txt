@@ -1,0 +1,24 @@
+data_save_dir: /home/aca/Documents/AD_AIT_ACA_Imp/data/
+data_file_name: 144431
+device: cpu
+sequentials: True
+input_size: 1
+hidden_size: 64
+num_layers: 2
+num_classes: 269
+batch_size: 2048
+accumulation_step: 1
+optimizer: adam
+lr: 0.001
+max_epoch: 10
+lr_step: (300, 350)
+lr_decay_ratio: 0.1
+resume_path: None
+model_name: audit
+save_dir: /home/aca/Documents/AD_AIT_ACA_Imp/result/aminer-deep/
+model_path: /home/aca/Documents/AD_AIT_ACA_Imp/result/deeplog/audit_last.pth
+num_candidates: 9
+zmq_pub_endpoint: tcp://127.0.0.1:5559
+zmq_sub_endpoint: tcp://127.0.0.1:5560
+zmq_aminer_top: AminerOut
+zmq_detector_top: DetectorOut

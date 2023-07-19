@@ -1,0 +1,17 @@
+(analysis_context.aminer_config, anomaly_event_handlers, item['paths'], item['ignore_list'], 
+                                    item['group_by_list'], window_size=item['window_size'], persistence_id=item['persistence_id'], 
+                                    learn_mode=learn, output_logline=item['output_logline'], 
+                                    zmq_publisher_address=item['zmq_publisher_address'], zmq_subscriber_address=item['zmq_subscriber_address'])
+
+
+
+          {
+              'id': {'type': 'string', 'nullable': True},
+              'type': {'type': 'string', 'allowed': ['SequenceDetector'], 'required': True},
+              'paths': {'type': 'list', 'schema': {'type': 'string'}, 'nullable': True},
+              'seq_len': {'type': 'integer', 'min': 1},
+              'persistence_id': {'type': 'string'},
+              'learn_mode': {'type': 'boolean'},
+              'output_logline': {'type': 'boolean'},
+              'output_event_handlers': {'type': 'list', 'nullable': True},
+          },
